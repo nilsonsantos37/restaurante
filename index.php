@@ -1,3 +1,6 @@
+<?php 
+session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,13 +30,13 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-home"></i>Home</a>
+                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-home"></i>Home</a>
                   <a href="pedido.php" class="nav-item nav-link"><i class="fa fa-file-text"></i>Pedido</a>
                     <a href="produto.php" class="nav-item nav-link active"><i class="fa fa-shopping-cart"></i>Produto</a>
                     <a href="usuario.php" class="nav-item nav-link active"><i class="fa fa-user-circle"></i>Cadastrar Usuario</a>
                     <a href="login.php" class="nav-item nav-link"><i class="fa fa-sign-in"
                             aria-hidden="true"></i>Login</a>
-                  <a href="https://www.google.com.br" class="nav-item nav-link"><i class="fa fa-sign-out"
+                  <a href="logout.php" class="nav-item nav-link"><i class="fa fa-sign-out"
                             aria-hidden="true"></i>Exit</a>
                 </div>
             </div>
@@ -74,9 +77,9 @@
                 <p><i class="fa fa-phone-alt mr-2"></i>031 1234-6789</p>
                 <p><i class="fa fa-envelope mr-2"></i>MegaDelivery@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" href="#"><i
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" href="https://www.facebook.com"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" href="#"><i
+                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" href="https://www.instagram.com/"><i
                             class="fab fa-instagram"></i></a>
                 </div>
             </div>

@@ -16,6 +16,7 @@
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
     </head>
+    
     <body>
     <div class="container">
 
@@ -26,6 +27,7 @@
 
         <form action="alterar_usuario.php" method="POST">
             <h2>Usuário</h2>
+           <a href="index.php" class="nav-item nav-link active exit-button"><i class="fa fa-home"></i>Home</a>
             <br/>
             <div class="form-group">
                 <label for="cod_usuario">Código do usuário:</label>

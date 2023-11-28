@@ -1,13 +1,18 @@
 <?php 
-
 if (session_status() != PHP_SESSION_ACTIVE) {
     // Sessão ativa
     session_start();
 }   
-
-
 ?>
 <?php if (isset($_SESSION["nome_usuario"]) ): ?>
+
+    <?php 
+        require_once("produto/ProdutoController.php"); 
+        $produto_control = new ProdutoController();
+        if ( count($_POST) > 0 ) {
+            $resultado = $produto_control -> cadastrar($_POST);
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,11 +22,22 @@ if (session_status() != PHP_SESSION_ACTIVE) {
     <title>Pedido</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<style>
+    /* Adicione este estilo para posicionar no canto superior direito */
+    .exit-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+</style>
+
 <body>
     <div class="container">
      <form action="cadastrar_pedido.php" method="POST"> 
         <h5>Olá, <?= $_SESSION["nome_usuario"]; ?>!
         <h2>Escolha de itens do pedido</h2>
+        <a href="index.php" class="nav-item nav-link active exit-button"><i class="fa fa-home"></i>Home</a>
+            <br/>
         <br/>
      <div class="form-group">
      <label for="nome_produto">Nome do produto:</label>
@@ -46,6 +62,9 @@ if (session_status() != PHP_SESSION_ACTIVE) {
             </div>
         <?php endif; ?>
     </form>
+
+
+    
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
