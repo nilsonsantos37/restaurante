@@ -51,7 +51,6 @@
             <br/>
             <?php if( isset($resultado) ): ?>
             <div class="alert <?= $resultado["style"] ?>">
-            <div class="alert <?= $resultado["style "] ?>">
                <?php echo $resultado["msg"]; ?>
             </div>
 

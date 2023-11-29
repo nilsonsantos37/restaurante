@@ -6,13 +6,7 @@ if (session_status() != PHP_SESSION_ACTIVE) {
 ?>
 <?php if (isset($_SESSION["nome_usuario"]) ): ?>
 
-    <?php 
-        require_once("produto/ProdutoController.php"); 
-        $produto_control = new ProdutoController();
-        if ( count($_POST) > 0 ) {
-            $resultado = $produto_control -> cadastrar($_POST);
-        }
-        ?>
+    
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
