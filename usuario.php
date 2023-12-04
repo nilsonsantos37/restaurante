@@ -17,11 +17,20 @@
     <title>Usuários</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<style>
+    /* Adicione este estilo para posicionar no canto superior direito */
+    .exit-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+</style>
 <body>
     <div class="container">
 
         <form action="usuario.php" method="POST">
         <h2>Usuário</h2>
+        <a href="index.php" class="nav-item nav-link active exit-button"><i class="fa fa-home"></i>Home</a>
             <br/>
             <div class="form-group">
             <label  for="nome_usuario">Nome do usuario:</label>
